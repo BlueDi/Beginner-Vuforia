@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AbsWO2n/////AAABmSsPw63fzkZikALUhHa1Bp9LkYTVGJ45KEvFurhgfRh+rLxla+YlzzN3YjlKELEAV9unlPAj/azwfaHOERn7QVaX26atU/ksQV+Xn2EgIYdZIhNxMOpp8bXE3xEWKBLQuzTbspagser2j/5Zs+cd5k8z6+TYX5z7/oJ4fqHm8cm5QwxdEg1JPl+jPOC7GUL6RR53mKNpiQrvx6KxU9xVcQTQ45LRC42pOe4rF38cj6hpYEN+YYusc+JcjLl/7uJ9+rUQNyG7Tsf5nHSMZaPjgt5/djU1eMqDuFKdJP6TCkIOzrCkWArH6beVAhFYhKs32W5ahnYpx1BPIJJRK0uqa/aOlisGlqRcFtsu/EzkLRqg
-    ufoLicenseKey: QVhob1c3Zi8vLy8vQUFBQUtLc2dzcnhOU2svUG9YQlYzNnV4bFMxbzRVTjIySkZuQ0JvVXNLNmhRcGV5KzNiVEtWSDIzc1c2b0ZPOEJ0TjUyZEFNVG0zaUdOWHFOcnFxTlFXZGZuelFzcXpUdmpNTXhVMzZGMVVIS2RsaTVYdWRaN3dva1B6eU14NEx0MXMzajlLOU95RVlHemFtY205SEdlUHlUZkcyR2xEK1MyTzc4M3ZFOUZXWStxTlRkejQzQll4dXVVVHlETkF1aFhFUlpNa3poaW9WMkloQitlVVVkK2g4dWxEQjRjcXM1bmtBVksxdERkRzBlWWluMG1GY2EveWUxajlJVXgzUzRORjJyU09CWmhsUVN6Q3NtQU9xMXFZaVZTVzJHTS9XNWF2TUFVOS92aDcrWW1aQVJlRWhxTHNCdkp4dXdSc3JPNHVzcEQyOXRFKzZicVAvdjhqMnBnd0RxUENxL0lTYS9rQlB3YnViQnBpV1FDbWo=
+    vuforiaLicenseKey: AS9OcEX/////AAABmSg2tnHx3UE/oTcHBTKSLk4IlnBgwyolPDriebFby9kVP2+1BSeuoBhRPdgoxadKX/Ho5Yjpt7vdtgRcfKtx6s6ia3kHeCM5fag0MU2jU80Yn0LLH/xBApiedU3R15IofiSlJfGgyOQTYdzq6UTUoHIlMP0PPMQJKRFyvj6nJUg+xTtwQYsmIjKSKw9vW/HazccINdJLg1Vk8q7yZmHa+ax0wwH+t2gf0rgvtI2rvi1uG2A0mtrx7AviohQ/lMxxpgtuE5Zwx8JAvRoOwfRYsS+fWHCi9FSafna3VZ6cGDDxIamYDAELdtrdUm6f9fucbkUhVF73N8mBcnMNKi4B0SOhlaray41l0LM5/EJ1j+8R
+    ufoLicenseKey: QWFqWmU3bi8vLy8vQUFBQUtBUThVQzh6bjB5TWhDUTFtUzY5aTA2UytLL2JiRWdCYjkxejMvbW5WcndWOFRmQThEdDRsR0wrTkQybVcyTHhmSW82bk1ZOUgrWnM0TG5mWGJFQXU5N2tBUXhQdkpxOWtRSkNhZ1ozRDdIWDVLempRTGpSWndSYUhXSjVyS1FZRGxyS1lrc09EMk5aakVZZ0lJV3NWNkV4UWwrdXZScFBZUm1mdWhHL3VpalJSTUgrOFlqSGMxNTdnSVZhYS93ZnZ1Z0VaNFYvUDR5Q2RWWjFsdGFqZnhqTVJFSlVQeVh4bGtBZ0x3bW9Iem1sUmtMN2pBR2EwR3djeGdCZ1JiVzZkWlgrZ291V040N3JENm5JdkxiY0liZkQ0Z3NPTkhJM3JPRll4WHhPNzhYOGkyK3hMV2t1U2MwS2JscmVkQzFhQ3Boakx1ekdya0VaTWpxYWRnZ2RCYWNVUWFTNWJKdE4vU3l1UkZKZnRkMHM=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
@@ -21,8 +21,7 @@ MonoBehaviour:
     useDelayedLoadingObjectTargets: 0
     cameraDirection: 0
     mirrorVideoBackground: 0
-    version: 7.5.20
-    eulaAccepted: 0
+    version: 7.2.23
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
@@ -47,8 +46,8 @@ MonoBehaviour:
   videoBackground:
     clippingMode: 0
     numDivisions: 2
-    videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
-      type: 3}
+    videoBackgroundShader: {fileID: 15311, guid: 0000000000000000f000000000000000,
+      type: 0}
     matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:

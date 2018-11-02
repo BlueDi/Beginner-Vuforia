@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 2074456905}
   - component: {fileID: 2074456907}
   m_Layer: 0
-  m_Name: Video Player
+  m_Name: VideoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2010,7 +2010,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1536595442}
-  playButtonMaterial: {fileID: 2100000, guid: 8fd94361a3f6f2b419ef92114e31851e, type: 2}
-  pauseButtonMaterial: {fileID: 2100000, guid: 7dabece9452d2f34991e3e0b65ee28ee, type: 2}
-  screenRenderer: {fileID: 0}
   videoPlayer: {fileID: 2074456905}

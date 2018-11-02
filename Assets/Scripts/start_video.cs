@@ -31,4 +31,13 @@ public class start_video : MonoBehaviour {
     public void Backward5s() {
         videoPlayer.time -= 5;
     }
+    public void IncreaseVolume() {
+        float av = videoPlayer.GetDirectAudioVolume(0);
+        videoPlayer.SetDirectAudioVolume(0, av + 0.1F);
+    }
+
+    public void DecreaseVolume() {
+        float av = videoPlayer.GetDirectAudioVolume(0);
+        videoPlayer.SetDirectAudioVolume(0, av - 0.1F);
+    }
 }

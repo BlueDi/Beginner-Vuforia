@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Xml;
-using System.Timers;
+using TMPro;
 
 public class MeteoUpdate : MonoBehaviour {
 
@@ -12,8 +12,11 @@ public class MeteoUpdate : MonoBehaviour {
     public Transform sagira;
     public Text collisionConsole;
     public Text gpsConsole;
+    public TextMeshPro frontMesh;
+    public TextMeshPro backMesh;
 
     private bool updating = false;
+    private float cooldown = 0.0F;
 
     private float latitude = 10000;
     private float longitude = 10000;
@@ -26,13 +29,17 @@ public class MeteoUpdate : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        cooldown -= Time.deltaTime;
+
         Vector3 myPos = transform.position;
         Vector3 sagiraPos = sagira.transform.position;
 
         float diff = Vector3.Distance(myPos, sagiraPos);
 
-        if(!updating && diff <= 0.1)
+        if(!updating && diff <= 0.1 && cooldown <= 0)
         {
+            updating = true;
+            cooldown = 5;
             StartCoroutine(GetWeather());
         }
 
@@ -80,9 +87,12 @@ public class MeteoUpdate : MonoBehaviour {
     }
 
     IEnumerator GetWeather()
-    {
-        updating = true;
+    { 
+        //Reset
         collisionConsole.text = "Getting Weather...";
+        frontMesh.SetText("...");
+        backMesh.SetText("...");
+
 
         if (latitude == 10000 || longitude == 10000)
         {
@@ -108,27 +118,31 @@ public class MeteoUpdate : MonoBehaviour {
                 XmlDocument doc = new XmlDocument();
                 doc.LoadXml(www.downloadHandler.text);
 
-                XmlNode weatherXML = doc.SelectSingleNode("/current/weather/@number");
-               
-                string desiredValue = "null";
-                if (weatherXML != null)
-                    desiredValue = weatherXML.InnerText;
+                XmlNode weatherIDXml = doc.SelectSingleNode("/current/weather/@number");
+                XmlNode weatherTempXml = doc.SelectSingleNode("/current/temperature/@value");
 
-                collisionConsole.text = "Weather value: " + desiredValue;
 
+                string weatherId = "null";
+                if (weatherIDXml != null)
+                {
+                    weatherId = weatherIDXml.InnerText;
+                    collisionConsole.text = "Weather value: " + weatherId;
+                }
+
+                string weatherTemp = "null";
+                if(weatherTempXml != null)
+                {
+                    weatherTemp = weatherTempXml.InnerText;
+                    frontMesh.SetText(weatherTemp + "ºC");
+                    backMesh.SetText(weatherTemp + "ºC");
+                }
 
             }
         }
 
-        System.Timers.Timer timer = new System.Timers.Timer(5000);
-        timer.Elapsed += new System.Timers.ElapsedEventHandler(OnTimedEvent);
-        timer.Enabled = true;
+        updating = false;
     }
 
-    private void OnTimedEvent(object source, ElapsedEventArgs e)
-    {
-         updating = false;
-    }
 }
 
 

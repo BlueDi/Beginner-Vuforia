@@ -7,6 +7,10 @@ public class ShootButtonClick : MonoBehaviour {
 
     public GameObject sagira;
     public Button btn;
+    public GameObject bolt;
+
+
+
 
     const float COOLDOWN = 0.5F;
 
@@ -31,6 +35,10 @@ public class ShootButtonClick : MonoBehaviour {
             //
 
             Transform sagiraTransform = sagira.GetComponent<Transform>();
+            GameObject bullet = Instantiate(bolt, sagiraTransform.position, sagiraTransform.rotation);
+            bullet.AddComponent<Rigidbody>();
+            bullet.GetComponent<Rigidbody>().useGravity = false;
+            bullet.GetComponent<Rigidbody>().velocity = new Vector3(0,-0.1F,0);
 
 
             cooldownTime = COOLDOWN;

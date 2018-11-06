@@ -9627,6 +9627,7 @@ GameObject:
   - component: {fileID: 1159778320}
   - component: {fileID: 1159778319}
   - component: {fileID: 1159778318}
+  - component: {fileID: 1159778321}
   m_Layer: 5
   m_Name: UndoButton
   m_TagString: Untagged
@@ -9728,6 +9729,19 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159778316}
   m_CullTransparentMesh: 0
+--- !u!114 &1159778321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159778316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39ae345006ac34439a9940db524a9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1159778318}
+  handler: {fileID: 2108964572}
 --- !u!1 &1165980183
 GameObject:
   m_ObjectHideFlags: 0
@@ -16872,6 +16886,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2087131127}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2108964572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114816571305489748, guid: e0aba74480574f74bb472bbb64f825e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 797608226}
+  m_Script: {fileID: 11500000, guid: 341fd65ce12642e4ca2eaff0dfb9c910, type: 3}
 --- !u!1 &2117357759
 GameObject:
   m_ObjectHideFlags: 0

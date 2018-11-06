@@ -21,7 +21,7 @@ public class BallonHandler : MonoBehaviour {
     {
         if(col.gameObject.name.Contains("Bolt"))
         {
-            bhandler.PopBallon(1);
+            bhandler.PopBallon(1, gameObject);
             gameObject.SetActive(false);
             ballonAudio.Play(0);
         }
@@ -31,7 +31,7 @@ public class BallonHandler : MonoBehaviour {
     {
         if (col.gameObject.name.Contains("Bolt"))
         {
-            bhandler.PopBallon(1);
+            bhandler.PopBallon(1, gameObject);
             gameObject.SetActive(false);
             ballonAudio.Play(0);
         }

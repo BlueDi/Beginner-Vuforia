@@ -12,6 +12,7 @@ public class BallonImageHandler : MonoBehaviour {
     public Text console;
     public TextMeshPro front;
     public TextMeshPro back;
+    public List<GameObject> ballons;
 
     private const int level1BallonsTotal = 10;
 
@@ -22,7 +23,7 @@ public class BallonImageHandler : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+        ballons = new List<GameObject>();
 	}
 	
 	// Update is called once per frame
@@ -50,9 +51,10 @@ public class BallonImageHandler : MonoBehaviour {
         }
     }
 
-    public void PopBallon(int level)
+    public void PopBallon(int level, GameObject ballon)
     {
         level1Ballons++;
+        ballons.Add(ballon);
 
         if(level == 1 && level1Ballons == 1)
         {
@@ -83,10 +85,26 @@ public class BallonImageHandler : MonoBehaviour {
             child.gameObject.SetActive(true);
         }
 
+        ballons = new List<GameObject>();
         gameStarted = false;
         gameTime = 0.0F;
         level1Ballons = 0;
+
     }
 
+    public void Undo()
+    {
+        if(gameStarted)
+        {
+            int index = ballons.Count;
+
+            if(index > 0)
+            {
+                ballons[index - 1].SetActive(true);
+                ballons.Remove(ballons[index - 1]);
+                level1Ballons--;
+            }
+        }
+    }
 
 }

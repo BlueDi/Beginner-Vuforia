@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="destiny_logo" size="1.000000 0.964706" />
+    <ImageTarget name="ballons" size="0.283000 0.198100" />
+    <ImageTarget name="ghost" size="0.079400 0.076753" />
+    <ImageTarget name="meteo" size="0.254000 0.190500" />
   </Tracking>
 </QCARConfig>

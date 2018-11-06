@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="bmx" size="0.100000 0.165882" />
+    <ImageTarget name="boxe" size="1.000000 1.614035" />
+  </Tracking>
+</QCARConfig>

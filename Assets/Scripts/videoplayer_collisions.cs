@@ -9,7 +9,6 @@ public class videoplayer_collisions : MonoBehaviour {
     
     void Start()
     {
-        videoPlayer = GetComponent<VideoPlayer>();
     }
 
     void OnTriggerEnter(Collider other)

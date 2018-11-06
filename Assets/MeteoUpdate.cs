@@ -10,10 +10,7 @@ using System.Text;
 
 public class MeteoUpdate : MonoBehaviour {
 
-    public Text diffConsole;
     public Transform sagira;
-    public Text collisionConsole;
-    public Text gpsConsole;
     public TextMeshPro frontMesh;
     public TextMeshPro backMesh;
 
@@ -55,9 +52,6 @@ public class MeteoUpdate : MonoBehaviour {
             cooldown = 5;
             StartCoroutine(GetWeather());
         }
-
-        diffConsole.text = diff + "";
-        gpsConsole.text = "Lat: " + latitude + ", Lon: " + longitude;
 	}
 
     IEnumerator GetGPSCoordinates()
@@ -102,7 +96,6 @@ public class MeteoUpdate : MonoBehaviour {
     IEnumerator GetWeather()
     { 
         //Reset
-        collisionConsole.text = "Getting Weather...";
         frontMesh.SetText("...");
         backMesh.SetText("...");
 
@@ -155,7 +148,6 @@ public class MeteoUpdate : MonoBehaviour {
                 if (weatherIDXml != null)
                 {
                     weatherId = weatherIDXml.InnerText;
-                    collisionConsole.text = "Weather value: " + weatherId;
 
                     int weatherIdnum = Int32.Parse(weatherId);
 

@@ -1,24 +1,43 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
 public class videoplayer_collisions : MonoBehaviour {
     public VideoPlayer videoPlayer;
-    void onTriggerEnter(Collider other)
+    
+    void Start()
     {
-        Debug.Log(other, this);
-    }
-    void onTriggerStay(Collider other)
-    {
-
+        videoPlayer = GetComponent<VideoPlayer>();
     }
 
-    void onTriggerExit(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-
+        Debug.Log("bateu");
+        if (gameObject.name == "PlayPauseCube")
+        {
+            PlayPause();
+        } 
     }
-
+    void OnTriggerStay(Collider other)
+    {
+        if (gameObject.name == "ForwardCube")
+        {
+            Forward5s();
+        }
+        else if (gameObject.name == "BackwardCube")
+        { Backward5s(); }
+        else if (gameObject.name == "IncreaseVolumeCube")
+        {
+            IncreaseVolume();
+        }
+        else if (gameObject.name == "DecreaseVolumeCube")
+        {
+            DecreaseVolume();
+        }
+    }
+    
     public void PlayPause()
     {
         if (videoPlayer.isPlaying)

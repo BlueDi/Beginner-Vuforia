@@ -35,7 +35,7 @@ public class BallonImageHandler : MonoBehaviour {
 
         float diff = Vector3.Distance(myPos, sagiraPos);
 
-        console.text = diff + "";
+        //sconsole.text = diff + "";
 
         if (gameStarted)
             gameTime += Time.deltaTime;

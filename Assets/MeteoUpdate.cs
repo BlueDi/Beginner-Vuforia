@@ -46,7 +46,7 @@ public class MeteoUpdate : MonoBehaviour {
 
         float diff = Vector3.Distance(myPos, sagiraPos);
 
-        if(!updating && diff <= 0.15 && cooldown <= 0)
+        if(!updating && diff <= 0.10 && cooldown <= 0)
         {
             updating = true;
             cooldown = 5;

@@ -6,8 +6,9 @@ public class BoltHandler : MonoBehaviour
 {
     Vector3 initialPos;
 
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start ()
     {
         Destroy(gameObject, 5.0F);
 	}
@@ -20,6 +21,15 @@ public class BoltHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Destroy(gameObject);
+        if(col.gameObject.name != "SagiraObject")
+            Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name != "SagiraObject")
+        {
+            Destroy(gameObject);
+        }
     }
 }

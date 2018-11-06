@@ -26,4 +26,14 @@ public class BallonHandler : MonoBehaviour {
             ballonAudio.Play(0);
         }
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name.Contains("Bolt"))
+        {
+            bhandler.PopBallon(1);
+            gameObject.SetActive(false);
+            ballonAudio.Play(0);
+        }
+    }
 }

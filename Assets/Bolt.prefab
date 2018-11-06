@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20a9b6ac0e52e664589a748ac32d0b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sagiraObject: {fileID: 0}
+  bhandler: {fileID: 0}
+  ballonAudio: {fileID: 0}
 --- !u!136 &136212248576892584
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -145,7 +146,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1075270350770418}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
